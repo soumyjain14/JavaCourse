@@ -1,0 +1,15 @@
+package classes_and_objects;
+
+public class ComplexNumberUse {
+
+	public static void main(String[] args) {
+		ComplexNumber c=new ComplexNumber (4,5);
+		
+		ComplexNumber c1=new ComplexNumber(1,2);
+		c.multiply(c1);
+		c.print();
+		
+		
+	}
+
+}

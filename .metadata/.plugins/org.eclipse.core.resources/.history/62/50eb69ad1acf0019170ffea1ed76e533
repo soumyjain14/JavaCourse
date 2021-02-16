@@ -1,0 +1,25 @@
+package for_loops;
+
+import java.util.Scanner;
+import java.math.*;
+
+public class reverse {
+
+	public static void main(String[] args) {
+		 Scanner scan=new Scanner(System.in);
+			int n=scan.nextInt();int i=1;int j=0;int k=1;
+			
+			while(n>0)
+			{
+				n=n/2;
+				j++;
+			}
+			System.out.println(j);
+			
+			
+			
+		
+	
+	}
+
+}

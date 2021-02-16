@@ -1,0 +1,35 @@
+package for_loops;
+
+import java.util.Scanner;
+
+public class reverse {
+
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		int n=scan.nextInt();
+		int prev=scan.nextInt();
+		int i=1;int count=1;boolean isdec=true;
+		while(i<=n-1)
+		{
+			int curr=scan.nextInt();
+			if(curr==prev)
+			{
+				isdec=false;
+			}
+			if(curr>prev)
+			{
+				count++;
+			}
+			if(curr<prev)
+			{
+				if(count>=2)
+					isdec=false;
+			}
+			prev=curr;
+			i++;
+		}
+		System.out.println(isdec);	
+	
+	}
+
+}

@@ -1,0 +1,21 @@
+package for_loops;
+import java.util.*;
+
+public class for_loop1 {
+
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		int n=scan.nextInt();
+		int sum=0;
+		for(int i=2;i<=n;i++)
+		{
+			for(int j=i-1;j<=i-1;j++)
+			{
+				sum=sum+j;
+			}
+		}
+		
+		System.out.println(sum);
+	}
+
+}

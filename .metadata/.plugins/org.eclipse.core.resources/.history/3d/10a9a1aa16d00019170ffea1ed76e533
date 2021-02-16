@@ -1,0 +1,10 @@
+package for_loops;
+
+public class FtoC {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

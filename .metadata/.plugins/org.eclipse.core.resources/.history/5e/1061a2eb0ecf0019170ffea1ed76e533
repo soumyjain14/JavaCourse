@@ -1,0 +1,29 @@
+package for_loops;
+
+import java.util.Scanner;
+
+public class reverse {
+
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		int n=scan.nextInt();int a[];
+		a=new int[20];
+		int i=1;int j=1;int var=0;
+		while(n>0)
+		{
+			for(int k=0;k<20;k++)
+			{
+			j=n%2;
+			n=n/2;
+			a[k]=j;
+			
+			}		
+		}
+		
+	/*for(int m=20;m>=0;m--)
+	{
+		System.out.print(a[m]);
+	}*/
+	}
+
+}

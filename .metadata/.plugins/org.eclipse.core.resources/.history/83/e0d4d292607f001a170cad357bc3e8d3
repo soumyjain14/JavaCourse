@@ -1,0 +1,14 @@
+package classes_and_objects;
+
+public class ComplexNumberUse {
+
+	public static void main(String[] args) {
+		ComplexNumber c=new ComplexNumber (4,2);
+		
+		
+		c.print();
+		
+		
+	}
+
+}

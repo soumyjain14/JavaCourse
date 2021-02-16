@@ -1,0 +1,28 @@
+package for_loops;
+import java.util.*;
+
+public class for_loop1 {
+
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		int n=scan.nextInt();
+		int t1=1;int t2=1;int t3=0;int i=1;
+		if(n==1||n==2)
+		{
+			System.out.println("1");
+			
+		}else {
+			while(i<n-1)
+			{
+				t3=t1+t2;
+				t1=t2;
+				t2=t3;
+			}
+			
+		}
+		System.out.println(t3);
+	
+		
+	}
+
+}

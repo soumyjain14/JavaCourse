@@ -1,0 +1,6 @@
+1585513367806	Rename type 'Fraction'
+1585513397611	Rename type 'FractionUse'
+1585513582424	Rename field 'denominator'
+1585513611984	Rename field 'real'
+1585513634017	Rename field 'real1'
+1585513655545	Rename method 'getNumerator'

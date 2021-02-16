@@ -1,0 +1,27 @@
+package for_loops;
+
+import java.util.Scanner;
+
+public class FtoC {
+
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		int n=scan.nextInt();int fib=0;int t1=1;int t2=1;
+		int i=1;
+		if(n==1||n==2)
+		{
+			System.out.println("1");
+		}else {
+		while(i<=n)
+		{
+			fib=t1+t2;
+			t2=t1;
+			t1=fib;
+			i++;
+		}
+		System.out.println(fib);
+		}
+		
+	}
+
+}

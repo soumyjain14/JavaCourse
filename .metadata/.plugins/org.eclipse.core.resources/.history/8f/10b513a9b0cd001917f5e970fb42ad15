@@ -1,0 +1,23 @@
+package for_loops;
+import java.util.*;
+public class prime {
+
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		int n=scn.nextInt();
+ int i,j,count=0;
+    for(i=2;i<=n;i++)
+    {  
+        for(j=2;j<=i;j++)
+      {
+            
+        if(i%j==0)
+          count=1;
+      }
+   if(count==0)
+     System.out.println(i);
+     count=0;		
+		
+	}
+	}
+}

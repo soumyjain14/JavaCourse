@@ -1,0 +1,18 @@
+package array;
+
+import java.util.Scanner;
+
+public class max_number {
+	public static int increment(int i) {
+		i++;
+		return i;
+	}
+
+	public static void main(String[] args) {
+		int i=10;
+		int j=increment(i);
+		System.out.println(j);
+
+	}
+
+}

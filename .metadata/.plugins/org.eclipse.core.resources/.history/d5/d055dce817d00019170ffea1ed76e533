@@ -1,0 +1,21 @@
+package for_loops;
+
+import java.util.Scanner;
+
+public class FtoC {
+
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		int start=scan.nextInt();int c;
+		int end=scan.nextInt();
+		int step=scan.nextInt();
+		while(start<=end)
+		{
+			c=(5*(start-32))/9;
+			System.out.println(start+"\t"+c);
+			start=start+step;
+		}
+
+	}
+
+}

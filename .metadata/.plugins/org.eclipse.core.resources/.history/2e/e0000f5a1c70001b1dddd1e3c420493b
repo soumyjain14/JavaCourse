@@ -1,0 +1,27 @@
+package classes_and_objects;
+
+public class Student {
+	public String name;
+	private final int rollNo;
+	
+	public Student(String name, int rollNo) {
+		this.name=name;
+		this.rollNo=rollNo;
+		
+	}
+	
+//	public void setRollNumber(int rn) {
+//		if (rn>0) {
+//		rollNo=rn;
+//	}
+//}
+	
+	public int getRollNumber() {
+		return rollNo;
+	}
+	
+	public void print() {
+		System.out.println(name+" : "+rollNo);
+	}
+
+}

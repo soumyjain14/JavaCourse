@@ -1,0 +1,23 @@
+package for_loops;
+import java.util.*;
+
+public class for_loop1 {
+
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		int n=scan.nextInt();
+		int d=2;
+		while(d<n)
+		{
+			if(n%d==0) {
+			
+				System.out.println("Not prime");
+			}else {
+				System.out.println("prime");
+			}
+		}
+	
+		
+	}
+
+}

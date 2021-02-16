@@ -1,0 +1,23 @@
+package classes_and_objects;
+
+
+
+public class StudentUse {
+	
+	
+	public static void main(String[] args) { 
+		Student s1=new Student();
+		Student s2=new Student();
+		s1.name="Soumy";
+		s2.name="Argh";
+		s1.RollNo=123;
+		s2.RollNo=121;
+		System.out.println(s1.name)
+		
+		
+				
+	}
+
+}
+
+

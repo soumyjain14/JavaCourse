@@ -1,0 +1,43 @@
+package for_loops;
+
+import java.util.Scanner;
+
+public class reverse {
+	public static boolean isPrime(int n)
+	{
+		int d=2;int i=1;
+		while(d<=n)
+		{
+			if(n%d==0)
+			{
+				return false;
+			}
+			d++;
+		}
+		return true;
+	}
+	
+	public static int fact(int n) {
+		int i=1;int ans=1;
+		while(i<=n)
+		{
+			ans=ans*i;
+			i++;
+		}
+		return ans;
+	}
+
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		int n=scan.nextInt();
+		int r=scan.nextInt();
+		int num=fact(n);		
+		int dec1=fact(r);		
+		int dec2=fact(n-r);
+		boolean ans1=isPrime(14);
+		int ans=num/(dec1*dec2);
+		System.out.println(ans1);
+		
+	}
+
+}

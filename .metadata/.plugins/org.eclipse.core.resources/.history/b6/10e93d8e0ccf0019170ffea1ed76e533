@@ -1,0 +1,23 @@
+package for_loops;
+
+import java.util.Scanner;
+
+public class reverse {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int n=scan.nextInt();int j=0;int i;
+		int sum=0;int pv=1;
+		while(n>0)
+		{
+			i=n%10;
+			sum=sum+(i*pv);
+			pv=2*pv;
+			n=n/10;
+		}
+		System.out.println(sum);
+		
+	
+	}
+
+}

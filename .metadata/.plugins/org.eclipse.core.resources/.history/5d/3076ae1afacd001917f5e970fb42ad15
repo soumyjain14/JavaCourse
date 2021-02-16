@@ -1,0 +1,22 @@
+package for_loops;
+import java.util.*;
+public class prime {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int n=scan.nextInt();
+		int i;int count=0;
+		int t;
+		for(i=1;i<=n+count;i++)
+		{
+			t=(3*i)+2;
+			if(t%4==0) {
+				count++;
+			continue;}
+			if(t%4!=0)
+			{
+				System.out.print(t+" ");
+			}
+		}
+	}
+}

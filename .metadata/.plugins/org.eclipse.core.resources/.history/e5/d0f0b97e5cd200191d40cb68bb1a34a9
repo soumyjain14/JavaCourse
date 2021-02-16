@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Increment {
+	
+	public static void main(String[] args) {
+		boolean arr[]=new boolean[20];
+		double darr[]=new double[20];
+		//arr[0]='s';
+		//darr[0]=1.2;
+		System.out.println(arr[0]);
+		System.out.println(darr[0]);
+	}
+
+}
