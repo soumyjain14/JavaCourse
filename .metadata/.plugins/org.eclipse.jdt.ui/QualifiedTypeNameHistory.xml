@@ -4,14 +4,17 @@
     <fullyQualifiedTypeName name="oops_1.StudentClass"/>
     <fullyQualifiedTypeName name="oops_1.Student"/>
     <fullyQualifiedTypeName name="classes_and_objects.ComplexNumber"/>
-    <fullyQualifiedTypeName name="classes_and_objects.DynamicArray"/>
     <fullyQualifiedTypeName name="classes_and_objects.DynamicArray1"/>
-    <fullyQualifiedTypeName name="classes_and_objects.Polynomial"/>
     <fullyQualifiedTypeName name="java.io.ObjectInputStream.GetField"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="Factorial"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="classes_and_objects.Student"/>
     <fullyQualifiedTypeName name="java.lang.Package"/>
+    <fullyQualifiedTypeName name="classes_and_objects.Student"/>
+    <fullyQualifiedTypeName name="classes_and_objects.Fraction"/>
+    <fullyQualifiedTypeName name="classes_and_objects.ComplexNumbers"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="classes_and_objects.DynamicArray"/>
+    <fullyQualifiedTypeName name="classes_and_objects.PolynomialUse"/>
+    <fullyQualifiedTypeName name="classes_and_objects.Polynomial"/>
 </qualifiedTypeNameHistroy>

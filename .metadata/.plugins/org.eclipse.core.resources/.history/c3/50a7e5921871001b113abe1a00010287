@@ -1,0 +1,23 @@
+package classes_and_objects;
+
+public class PolynomialUse {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Polynomial1 p1=new Polynomial1();
+		p1.setCoefficient(0, 3);
+		p1.setCoefficient(2, 2);
+		p1.setCoefficient(2, 5);
+		Polynomial1 p2=new Polynomial1();
+		p2.setCoefficient(2, 3);
+		p2.setCoefficient(1, 8);
+		p1.print1();
+		p2.print1();
+		Polynomial1 a=p1.add(p2);
+		a.print1();
+		
+		
+		
+	}
+
+}
