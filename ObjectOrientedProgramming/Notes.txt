@@ -1,0 +1,5 @@
+Parent class Constructor is called by itself
+
+If Default constructor gets hidden in the base class, either create a default constructor, or use the 
+super keyword to invoke the constructor created. super is used to access specifically parents
+class functions.
