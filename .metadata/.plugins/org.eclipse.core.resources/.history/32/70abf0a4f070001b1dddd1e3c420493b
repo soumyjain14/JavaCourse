@@ -1,0 +1,35 @@
+package classes_and_objects;
+
+public class Polynomial {
+	int coeff;
+	int degree;
+	
+	int coefficient[]=new int[100];
+	
+	
+	public void setCoefficient(int degree, int coeff) {
+		coefficient[degree]=coeff+coefficient[degree];
+	}
+	
+	public void add(Polynomial p2) {
+		for(degree=0;degree<10;degree++) {
+		if(this.degree==p2.degree) {
+			this.coefficient[degree]=p2.coefficient[degree]+this.coefficient[degree];
+		}
+		}
+		
+	}
+	
+	public void print() {
+		for(int i=0;i<coefficient.length;i++) {
+			if(coefficient[i]!=0) {
+			System.out.print(coefficient[i]+"x"+"^"+i+" ");
+			}
+		}
+		System.out.println();
+		
+	}
+
+}
+
+
