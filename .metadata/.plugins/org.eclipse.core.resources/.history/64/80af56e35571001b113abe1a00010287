@@ -1,0 +1,12 @@
+package temp;
+
+import vehicle.Vehicle;
+
+public class Truck extends Vehicle {
+	int maxLoadCapacity;
+	
+	public void print() {
+		System.out.println("Truck color :"+);
+	}
+
+}

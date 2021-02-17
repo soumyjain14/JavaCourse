@@ -1,0 +1,10 @@
+package vehicle;
+
+public class VehicleUse {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
