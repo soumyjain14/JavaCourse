@@ -17,4 +17,6 @@
     <fullyQualifiedTypeName name="classes_and_objects.DynamicArray"/>
     <fullyQualifiedTypeName name="classes_and_objects.PolynomialUse"/>
     <fullyQualifiedTypeName name="classes_and_objects.Polynomial"/>
+    <fullyQualifiedTypeName name="classes_and_objects.Polynomial1"/>
+    <fullyQualifiedTypeName name="vehicle.Vehicle"/>
 </qualifiedTypeNameHistroy>

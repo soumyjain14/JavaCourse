@@ -6,6 +6,10 @@ public class Fraction {
 	
 	public Fraction(int numerator,int denominator) {
 		this.numerator=numerator;
+		if(denominator==0) {
+			return;
+			//System.out.println("NOt Allowed");
+		} 
 		if(denominator!=0) {
 		this.denominator=denominator;
 		}
@@ -36,9 +40,14 @@ public class Fraction {
 		return numerator;
 	}
 	
-	public void setDenominator(int denominator) {
+	public void setDenominator(int denominator) throws ZeroDenominatorException {
+		if(denominator==0) {
+			ZeroDenominatorException e=new ZeroDenominatorException();
+			throw e;
+		}else {
 		this.denominator=denominator;
 		simplify();
+	}
 	}
 	
 	public int getDenominator() {
@@ -65,7 +74,10 @@ public class Fraction {
 	
 	}
 	public void print() {
-		if(denominator==1) {
+		if(denominator==0) {
+			System.out.println("Not Allowed..");
+			
+		} else if (denominator==1) {
 			System.out.println(numerator);
 		}else {
 		
