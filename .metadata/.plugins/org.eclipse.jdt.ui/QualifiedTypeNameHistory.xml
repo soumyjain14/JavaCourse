@@ -8,15 +8,17 @@
     <fullyQualifiedTypeName name="java.io.ObjectInputStream.GetField"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="Factorial"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.Package"/>
     <fullyQualifiedTypeName name="classes_and_objects.Student"/>
     <fullyQualifiedTypeName name="classes_and_objects.Fraction"/>
     <fullyQualifiedTypeName name="classes_and_objects.ComplexNumbers"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="classes_and_objects.DynamicArray"/>
     <fullyQualifiedTypeName name="classes_and_objects.PolynomialUse"/>
     <fullyQualifiedTypeName name="classes_and_objects.Polynomial"/>
     <fullyQualifiedTypeName name="classes_and_objects.Polynomial1"/>
     <fullyQualifiedTypeName name="vehicle.Vehicle"/>
+    <fullyQualifiedTypeName name="classes_and_objects.ZeroDenominatorException"/>
+    <fullyQualifiedTypeName name="recursion.Factorial"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>
