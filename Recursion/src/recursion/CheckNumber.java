@@ -24,8 +24,8 @@ public class CheckNumber {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int input[]= {1,2,3,8,7};
-		boolean answer=checkNumber(input,2);
+		int input[]= {1,2,3,8,-7};
+		boolean answer=checkNumber(input,7);
 		System.out.println(answer);
 		
 
