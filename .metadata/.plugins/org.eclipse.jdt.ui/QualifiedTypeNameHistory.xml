@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="oops_1.StudentClass"/>
     <fullyQualifiedTypeName name="oops_1.Student"/>
     <fullyQualifiedTypeName name="classes_and_objects.ComplexNumber"/>
@@ -21,4 +20,6 @@
     <fullyQualifiedTypeName name="recursion.Factorial"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="javax.management.ObjectInstance"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
 </qualifiedTypeNameHistroy>
