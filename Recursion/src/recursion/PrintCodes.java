@@ -28,7 +28,7 @@ public class PrintCodes {
 		String input="1123";
 		printAllPossibleCodes(input);
 
-		//System.out.println(b);
+		
 
 	}
 

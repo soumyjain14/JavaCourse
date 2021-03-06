@@ -30,8 +30,8 @@ public class BinarySearchRecursive {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int input[]= {0,0,0,2,2,2,2};
-		int position=binarySearch(input,2);
+		int input[]= {3,4,5,6,7,8,9};
+		int position=binarySearch(input,6);
 		System.out.println(position);
 
 	}

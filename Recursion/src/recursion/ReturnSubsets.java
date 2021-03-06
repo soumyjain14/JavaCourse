@@ -7,7 +7,7 @@ public class ReturnSubsets {
 	
 	public static int[][] subsets(int input[], int startIndex){
 		if(startIndex==input.length) {
-			int ans[][]=new int[1][1];
+			int ans[][]=new int[1][0];
 			return ans;
 		}
 		int first=input[startIndex];		
@@ -43,7 +43,7 @@ public class ReturnSubsets {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int input[]= {15,20,12};
+		int input[]= {20,12};
 		int ans[][]= subsets(input);
 		for(int i=0;i<ans.length;i++) {
 			for(int j=0;j<ans[i].length;j++) {

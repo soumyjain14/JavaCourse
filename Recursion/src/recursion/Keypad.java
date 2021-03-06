@@ -70,7 +70,7 @@ public class Keypad {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int n=234;
+		int n=2;
 		String ans[]=keyPad(n);
 		for(int i=0;i<ans.length;i++) {
 			System.out.println(ans[i]);
