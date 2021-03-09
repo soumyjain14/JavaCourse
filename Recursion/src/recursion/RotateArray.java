@@ -32,8 +32,8 @@ public class RotateArray {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int input[]= {1,3,6,11,12,17};
-		int d=0;
+		int input[]= {2,6,3,1,5,9,8};
+		int d=2;
 		rotate(input, d);
 
 	}
