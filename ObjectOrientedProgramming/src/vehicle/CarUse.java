@@ -6,8 +6,9 @@ public class CarUse {
 		// TODO Auto-generated method stub
 		Car c=new Car();
 		c.color="green";
-		c.maxSpeed=50;
-		//c.gears=5;
+		c.maxSpeed=75;
+		
+		c.gears=5;
 		c.isConvertible=true;
 		
 		c.print();

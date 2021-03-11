@@ -9,6 +9,12 @@ public class Truck extends Vehicle {
 		System.out.println("Truck color :"+ color);
 	}
 	
+	@Override
+	public boolean isMotorized() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
 	public static void main(String[] args) {
 		Truck t=new Truck();
 		t.color="silver";
