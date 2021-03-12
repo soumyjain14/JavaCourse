@@ -3,19 +3,32 @@ package recursion;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class RoughWork {	
+public class RoughWork {
 	
 	
+	public static int maximumProfit(int budget[]) {
+		
+		int sum=0;
+		int max=Integer.MIN_VALUE;
+		Arrays.sort(budget);
+		for(int i=0;i<budget.length;i++) {
+			sum=budget[i]*(budget.length-i);
+			if(max<sum) {
+				max=sum;
+			}
+			
+		}
+		return max;
+		
+	}
 		
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int input[]= {0,6,0,0};
-		int num=6;
-		//int ans=pairSum(input, num);
-		//System.out.println(ans);
-
-
+		int input[]= {34,78,90,15,67};
+		int ans=maximumProfit(input);
+		System.out.println(ans);
+		
 	}
 
 }

@@ -27,4 +27,5 @@
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="vehicle.Vehicle"/>
+    <fullyQualifiedTypeName name="interfaces.VehicleInterface"/>
 </qualifiedTypeNameHistroy>
