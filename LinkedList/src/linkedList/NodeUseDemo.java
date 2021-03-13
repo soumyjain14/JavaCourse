@@ -6,27 +6,24 @@ public class NodeUseDemo {
 
 	public static Node<Integer> takeInput(){
 		Node<Integer> head=null;
+		Node<Integer> tail=null;
 		Scanner s=new Scanner(System.in);
 		int data=s.nextInt();
-
+		
 		while(data!=-1) {
-			Node<Integer> newNode=new Node<Integer>(data);
+			Node<Integer> newNode=new Node<>(data);
 			if(head==null) {
 				head=newNode;
+				tail=newNode;
 			}else {
-				Node<Integer>temp=head;
-				while(temp.next!=null) {
-					temp=temp.next;
-				}
-				temp.next=newNode;
+				tail.next=newNode;
+				tail=newNode;
 			}
 			data=s.nextInt();
-
 		}
 		return head;
-
 	}
-
+	
 	public static void printLL(Node<Integer> head) {
 		Node<Integer> temp=head;
 		while(head!=null) {
