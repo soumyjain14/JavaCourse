@@ -6,28 +6,27 @@ import java.util.Scanner;
 public class RoughWork {
 	
 	
-	public static int maximumProfit(int budget[]) {
-		
-		int sum=0;
-		int max=Integer.MIN_VALUE;
-		Arrays.sort(budget);
-		for(int i=0;i<budget.length;i++) {
-			sum=budget[i]*(budget.length-i);
-			if(max<sum) {
-				max=sum;
+	public static boolean hasAllCodes(String s, int k) {
+		if(k==1) {
+			if(s.contains("0") && s.contains("1")){
+				return true;
 			}
-			
 		}
-		return max;
+		
+		
+		return false;
+		
 		
 	}
 		
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int input[]= {34,78,90,15,67};
-		int ans=maximumProfit(input);
+		String s="110";
+		int k=1;
+		boolean ans=hasAllCodes(s,k);
 		System.out.println(ans);
+		
 		
 	}
 

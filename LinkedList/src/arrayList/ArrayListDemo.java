@@ -7,6 +7,7 @@ public class ArrayListDemo {
 		// TODO Auto-generated method stub
 		
 		ArrayList<Integer> list= new ArrayList<Integer>();
+		ArrayList<String> list1=new ArrayList<>();
 		System.out.println(list.size());
 		list.add(10);
 		list.add(15);
@@ -24,7 +25,6 @@ public class ArrayListDemo {
 		
 		list.remove(2);
 		list.set(0, 75);
-		list.isEmpty();
 		for(int element : list) {
 			System.out.print(element + " ");
 		}
