@@ -23,22 +23,23 @@ public class PrintIthNode {
 		return head;
 	}
 
-	public static void printIthNode(Node<Integer> head, int i) {
+	public static int printIthNode(Node<Integer> head, int n) {
 		int count=0;
 		while(head!=null) {
-			if(count==i) {
-				System.out.println(head.data);
-				head=null;
-			}else {
+			if(head.data==n) {
+				return count;
+			}else 
 				head=head.next;
-				count++;
-			}
+			count++;
 		}
-
+		return -1;
 	}
+
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		printIthNode(takeInput(), 3);
+		int ans=printIthNode(takeInput(), 5);
+		System.out.println(ans);
 
 	}
 

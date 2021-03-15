@@ -6,18 +6,7 @@ import java.util.Scanner;
 public class RoughWork {
 	
 	
-	public static boolean hasAllCodes(String s, int k) {
-		if(k==1) {
-			if(s.contains("0") && s.contains("1")){
-				return true;
-			}
-		}
-		
-		
-		return false;
-		
-		
-	}
+	public static void 
 		
 	
 	public static void main(String[] args) {
