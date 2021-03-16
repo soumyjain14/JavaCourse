@@ -25,42 +25,14 @@ public class ReverseLL {
 	}
 
 	public static void printReverse(Node<Integer> head) {
-		Node<Integer> temp=head;
-		Node<Integer> temp2=head;
-		int count=0;
-		while(temp.next!=null) {
-			temp=temp.next;
-			count++;
+		if(head==null) {
+			return;
 		}
-
-		head=temp;
-
-		int i=0;
-		while(i<count) {
-			temp=temp2;
-			while(temp.next.next!=null) {
-				temp=temp.next;
-			}
-			temp.next.next=temp;
-			temp.next=null;
-			i++;
-		}
-
-		temp=head;
-		while(temp!=null) {
-			System.out.print(temp.data+" ");
-			temp=temp.next;
-		}
+		
+		printReverse(head.next);
+		System.out.print(head.data+" ");
 	}
-
-
-
-
-
-
-
-
-
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Node<Integer> head=takeInput();
