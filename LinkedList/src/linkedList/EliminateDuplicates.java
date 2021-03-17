@@ -2,7 +2,7 @@ package linkedList;
 
 import java.util.Scanner;
 
-public class AppendLastNtoFirst {
+public class EliminateDuplicates {
 	public static Node<Integer> takeInput(){
 		Node<Integer> head=null;
 		Node<Integer> tail=null;
@@ -24,43 +24,27 @@ public class AppendLastNtoFirst {
 		return head;
 	}
 
-	public static Node<Integer> appendLastNToFirst(Node<Integer> head, int n){
-		int count=0;
-		Node<Integer> temp=head;
-		if(n==0) {
+	public static Node<Integer> removeDuplicates(Node<Integer> head){
+		if(head==null) {
 			return head;
 		}
-
-		else {
-			while(temp!=null) {
-				temp=temp.next;
-				count++;
-			}
-			if(count<n) {
-				return head;
+		Node<Integer> t1=head;
+		Node<Integer> t2;
+		t2=t1.next;
+		while(t2!=null) {
+			if(t1.data.equals(t2.data)) {
+				t1.next=t2.next;
+				t2=t2.next;
 			}else {
-
-				temp=head;
-
-				Node<Integer> head2;
-				Node<Integer> temp1;
-				int i=1;
-				while(i<(count-n)) {
-					temp=temp.next;
-					i++;
-				}
-				head2=temp.next;
-				temp.next=null;
-				temp1=head2;
-				while(temp1.next!=null) {
-					temp1=temp1.next;
-				}
-				temp1.next=head;
-				return head2;
+				t1=t2;
+				t2=t2.next;
 			}
-		}
-	}
 
+		}
+		t1.next=t2;
+		return head;
+
+	}
 
 	public static void printLL(Node<Integer> head) {
 		Node<Integer>temp=head;
@@ -71,11 +55,10 @@ public class AppendLastNtoFirst {
 	}
 
 
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Node<Integer> head=takeInput();
-		head=appendLastNToFirst(head, 3);
+		head=removeDuplicates(head);
 		printLL(head);
 
 	}
