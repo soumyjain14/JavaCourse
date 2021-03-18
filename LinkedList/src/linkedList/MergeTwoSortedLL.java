@@ -37,6 +37,16 @@ public class MergeTwoSortedLL {
 		Node<Integer> temp2=head2;
 		Node<Integer> h3;
 		Node<Integer> t3;
+		if(temp1.next==null && temp1.data<temp2.data) {
+			h3=head1;
+			temp1.next=temp2;
+			t3=temp1;
+			
+		}else if(temp2.next==null) {
+			h3=head2;
+			temp2.next=temp1;
+			t3=temp2;
+		}else {
 		if(temp1.data<temp2.data) {
 			h3=head1;
 			t3=temp1;
@@ -59,6 +69,7 @@ public class MergeTwoSortedLL {
 				t3=t3.next;
 				t3.next=temp1;
 			}
+		}
 		}
 		return h3;
 		
