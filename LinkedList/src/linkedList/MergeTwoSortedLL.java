@@ -24,57 +24,21 @@ public class MergeTwoSortedLL {
 	}
 	
 	 public static Node<Integer> mergeTwoSortedLinkedLists(Node<Integer> head1, Node<Integer> head2){
-		if(head1==null && head2==null) {
-			return head1;
-		}
 		if(head1==null) {
 			return head2;
 		}
 		if(head2==null) {
 			return head1;
 		}
-		Node<Integer> temp1=head1;
+		Node<Integer>temp1=head1;
 		Node<Integer> temp2=head2;
-		Node<Integer> h3;
-		Node<Integer> t3;
-		if(temp1.next==null && temp1.data<temp2.data) {
-			h3=head1;
-			temp1.next=temp2;
-			t3=temp1;
-			
-		}else if(temp2.next==null) {
-			h3=head2;
-			temp2.next=temp1;
-			t3=temp2;
-		}else {
 		if(temp1.data<temp2.data) {
-			h3=head1;
-			t3=temp1;
-			temp1=temp1.next;
+			temp1.next=mergeTwoSortedLinkedLists(temp1.next, temp2);
+			return temp1;
 		}else {
-			h3=head2;
-			t3=temp2;
-			temp2=temp2.next;
+			temp2.next=mergeTwoSortedLinkedLists(temp1, temp2.next);
+			return temp2;
 		}
-		
-		while(temp1!=null && temp2 !=null) {
-			if(temp1.data<temp2.data) {
-				t3.next=temp1;
-				temp1=temp1.next;
-				t3=t3.next;
-				t3.next=temp2;
-			}else {
-				t3.next=temp2;
-				temp2=temp2.next;
-				t3=t3.next;
-				t3.next=temp1;
-			}
-		}
-		}
-		return h3;
-		
-		
-		 
 	 }
 	 
 	 public static void printLL(Node<Integer> head) {
