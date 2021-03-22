@@ -22,7 +22,7 @@ public class EvenAfterOddLL {
 		}
 		return head;
 	}
-	
+
 	public static void printLL(Node<Integer> head) {
 		Node<Integer>temp=head;
 		while(temp!=null) {
@@ -32,48 +32,44 @@ public class EvenAfterOddLL {
 		}
 	}
 	public static Node<Integer> evenAfterOdd(Node<Integer> head){
-		Node<Integer> curr=head;
-		Node<Integer> prev=null;
-		Node<Integer> next=head.next;
-		while(curr!=null) {
-			if(curr.data%2!=0) {
-				prev=curr;
-				curr=next;
-				next=next.next;
+		Node<Integer> temp=head;
+		Node<Integer> OddHead=null;
+		Node<Integer> OddTail=null;
+		Node<Integer> EvenHead=null;
+		Node<Integer> EvenTail=null;
+		while(temp!=null) {
+			if(temp.data%2!=0) {
+				if(OddHead==null) {
+					OddHead=temp;
+					OddTail=temp;					
+				}else {
+					OddTail.next=temp;
+					OddTail=temp;					
+				}
 			}else {
-				prev.next=next;
-				curr.next=next.next;
-				next.next=curr;
-				next=curr.next;
+				if(EvenHead==null) {
+					EvenHead=temp;
+					EvenTail=temp;					
+				}else {
+					EvenTail.next=temp;
+					EvenTail=temp;
+				}
 			}
+			temp=temp.next;
 		}
-		return head;
-		
+		if(OddHead!=null) {
+			if(EvenHead!=null) {
+				EvenTail.next=null;
+				OddTail.next=EvenHead;
+			}else {
+				OddTail.next=null;
+			}
+			return OddHead;
+		}else {
+			EvenTail.next=null;
+			return EvenHead;
+		}
 	}
-	
-//	public static Node<Integer> evenAfterOdd(Node<Integer> head){
-//		if(head==null || head.next==null) {
-//			return head;
-//		}
-//		
-//		Node<Integer> temp=evenAfterOdd(head.next);
-//		if(temp.data%2==0) {
-//			return head;
-//		}else {
-//			if(head.data%2!=0) {
-//				head.next=temp;
-//				return head;
-//			}else {
-//				head.next=temp.next;
-//				temp.next=head;
-//				head=temp;
-//				return head;
-//			}
-//		}
-//		
-//	}
-
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Node<Integer> head=takeInput();
