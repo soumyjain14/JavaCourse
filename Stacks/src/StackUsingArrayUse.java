@@ -15,6 +15,8 @@ public class StackUsingArrayUse {
 			try {
 				System.out.println(s.pop());
 			} catch (StackEmptyError e) {
+				// TODO Auto-generated catch block
+			
 			}
 		}
 

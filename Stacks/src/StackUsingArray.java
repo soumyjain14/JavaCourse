@@ -5,33 +5,27 @@ public class StackUsingArray {
 	private int top;
 	
 	public StackUsingArray() {
+		// TODO Auto-generated constructor stub
 		data=new int[10];
 		top=-1;
 	}
 	
 	public StackUsingArray(int capacity) {
+		// TODO Auto-generated constructor stub
 		data=new int[capacity];
 		top=-1;
 	}
 	
 	public boolean isEmpty() {
-		if(top==-1) {
-			return true;
-		}else {
-			return false;
-		}
+		return (top==-1);
 	}
 	
 	public int size() {
-		if(top==-1) {
-			return 0;
-		}else {
-			return top+1;
-		}
+		return top+1;
 	}
 	
 	public int top() throws StackEmptyError {
-		if(top==-1) {
+		if(size()==0) {
 			//StackEmpty Error
 			StackEmptyError e=new StackEmptyError();
 			throw e;
@@ -41,10 +35,12 @@ public class StackUsingArray {
 	
 	public void push(int element) throws StackFullException {
 		if(size()==data.length) {
-			//StackOverFlow Error
+			// StackFull Exception
 //			StackFullException e=new StackFullException();
 //			throw e;
+			
 			DoubleCapacity();
+			
 		}
 		top++;
 		data[top]=element;
@@ -56,12 +52,10 @@ public class StackUsingArray {
 		for(int i=0;i<temp.length;i++) {
 			data[i]=temp[i];
 		}
-		
 	}
 	
 	public int pop() throws StackEmptyError {
-		if(size()<=0) {
-			//
+		if(size()==0) {
 			StackEmptyError e=new StackEmptyError();
 			throw e;
 		}
