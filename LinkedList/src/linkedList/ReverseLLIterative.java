@@ -28,19 +28,16 @@ public class ReverseLLIterative {
 			return head;
 		}
 		Node<Integer> curr=head;
-		Node<Integer> prev=head;
-		Node<Integer> next=head.next;
-		Node<Integer> next2=next.next;
-		while(next!=null) {
-			curr=next;
+		Node<Integer> prev=null;
+		Node<Integer> next=curr.next;
+		while(curr!=null) {
 			curr.next=prev;
-			prev=next;
-			next=next2;
-			if(next2!=null) {
-				next2=next2.next;
+			prev=curr;
+			curr=next;
+			if(next!=null) {
+				next=next.next;
 			}
 		}
-		head.next=null;
 		return prev;
 	}
 	

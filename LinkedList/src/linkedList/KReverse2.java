@@ -43,16 +43,6 @@ public class KReverse2 {
 		return temp;
 	}
 	
-	public static int length(Node<Integer> head) {
-		
-		int count=0;
-		while(head!=null) {
-			count++;
-			head=head.next;
-		}
-		return count;
-	
-	}
 	
 	public static Node<Integer> kReverse(Node<Integer> head, int k){
 		if(head==null) {
@@ -70,7 +60,7 @@ public class KReverse2 {
 			if(temp.next!=null) {
 			temp=temp.next;
 			}
-			//tail=tail.next;
+			
 		}
 		Node<Integer> head2=temp.next;
 		temp.next=null;

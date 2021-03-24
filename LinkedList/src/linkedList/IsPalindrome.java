@@ -25,6 +25,24 @@ public class IsPalindrome {
 		}
 		return head;
 	}
+	public static void printLL(Node<Integer> head) {
+		Node<Integer>temp=head;
+		while(temp!=null) {
+			System.out.print(temp.data+" ");
+			temp=temp.next;
+			
+		}
+	}
+	public static Node<Integer> reverseLL(Node<Integer> head){
+		if(head==null || head.next==null) {
+			return head;
+		}
+		
+		Node<Integer> temp=reverseLL(head.next);
+		head.next.next=head;
+		head.next=null;
+		return temp;
+	}
 	
 	public static int getLength(Node<Integer> head) {
 		Node<Integer> temp=head;
@@ -35,27 +53,36 @@ public class IsPalindrome {
 		}
 		return count;
 	}
-
-	public static boolean isPalindrome(Node<Integer> head) {
-		int length=getLength(head);
-		ArrayList<Integer> list1=new ArrayList<>(length);
-		for(int i=0;i<length;i++) {
-			list1.add(head.data);
-			head=head.next;
+	public static Node<Integer> midPoint(Node<Integer> head) {
+		Node<Integer>slow=head;
+		Node<Integer>fast=head;
+		if(head==null) {
+			return head;
 		}
+		while(fast!=null && fast.next!=null) {
+			
+			fast=fast.next.next;
+			slow=slow.next;			
+		}		
+		return slow;	
 		
-		int tail=length-1;
-		int i=0;
-		boolean ans=true;
-		while(i<=tail) {
-			if(list1.get(i)!=list1.get(tail)) {
-				ans=false;
-				return ans;
-			}
+	}
+	
+
+	public static Node<Integer> isPalindrome(Node<Integer> head) {
+		Node<Integer> temp2=head;
+		Node<Integer> mid=midPoint(head);
+		printLL(mid);
+		Node<Integer> temp=reverseLL(mid);
+		//printLL(temp);
+		int count=getLength(head);
+		int i=1;
+		while(i<(count/2)) {
+			temp2=temp2.next;
 			i++;
-			tail--;
 		}
-		return ans;
+		temp2.next=temp;
+		return head;
 	}
 	
 	
@@ -63,8 +90,10 @@ public class IsPalindrome {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Node<Integer> head=takeInput();
-		boolean ans=isPalindrome(head);
-		System.out.println(ans);
+//		boolean ans=isPalindrome(head);
+//		System.out.println(ans);
+		head=isPalindrome(head);
+		printLL(head);
 
 	}
 

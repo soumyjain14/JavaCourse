@@ -24,53 +24,33 @@ public class MidPointLL {
 		return head;
 	}
 
-	public static int countLL(Node<Integer> head) {
-		Node<Integer> temp=head;
-		int count=0;
-		while(temp!=null) {
-			count++;
-			temp=temp.next;
-		}
-		return count;
-	}
+	
 
 	public static Node<Integer> midPoint(Node<Integer> head) {
-		Node<Integer> temp=head;
+		Node<Integer>slow=head;
+		Node<Integer>fast=head;
 		if(head==null) {
 			return head;
 		}
-		int count=countLL(head);
-		int i=0;int j=0;
-		if(count%2==0) {
-			j=count-1;
-		}else {
-			j=count;
-		}
-		while(i<(j/2)) {
-			temp=temp.next;
-			i++;
-		}
-		head=temp;
-		return head;
+		while(fast.next!=null && fast.next.next!=null) {
+			
+			fast=fast.next.next;
+			slow=slow.next;			
+		}		
+		return slow;	
 		
 	}
-
-	public static void printLL(Node<Integer> head) {
-		Node<Integer>temp=head;
-		while(temp!=null) {
-			System.out.print(temp.data+" ");
-			temp=temp.next;
-		}
-	}
-
+	
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Node<Integer>head=takeInput();
 		head=midPoint(head);
-		if (head != null) {
-            System.out.println(head.data);
-        }
-
+		while(head!=null) {
+			System.out.println(head.data);
+			break;
+		}
+		
 	}
 
 }
