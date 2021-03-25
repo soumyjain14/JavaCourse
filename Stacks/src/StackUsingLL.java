@@ -52,6 +52,14 @@ public class StackUsingLL<T> {
 			return temp;
 		}
 	}
+	
+	public int top() {
+		if(size==0) {
+			return -1;
+		}else {
+			return head.data;
+		}
+	}
 
 
 
