@@ -40,19 +40,32 @@ public class QueueUsingArray {
 	
 	public void enqueue(int element) throws QueueFullException {
 		if(size==data.length) {
-			throw new QueueFullException();
+			doubleCapacity();
+			front=0;
+			rear=size-1;
 		}
 		
 		if(size==0) {
 			front=0;
 		}
-		if(rear==data.length) {
+		if(rear==data.length-1) {
 			rear=-1;
-			front=0;
+			//front=0;
 		}
 		rear++;
 		data[rear]=element;
 		size++;
+	}
+	
+	private void doubleCapacity() {
+		int temp[]=data;
+		data=new int[temp.length*2];
+		for(int i=front;i<temp.length;i++) {
+			data[i-front]=temp[i];
+		}
+		for(int i=0;i<front;i++) {
+			data[i+front+1]=temp[i];
+		}
 	}
 	
 	public int dequeue() throws QueueEmptyException {
@@ -60,6 +73,9 @@ public class QueueUsingArray {
 			throw new QueueEmptyException();
 		}
 		int temp=data[front];
+		if(front==data.length-1) {
+			front=-1;
+		}
 		front++;
 		size--;
 		if(size==0) {
