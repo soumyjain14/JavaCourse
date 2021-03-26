@@ -37,6 +37,6 @@
     <fullyQualifiedTypeName name="StackFullException"/>
     <fullyQualifiedTypeName name="StackEmptyError"/>
     <fullyQualifiedTypeName name="StackUsingLL"/>
-    <fullyQualifiedTypeName name="java.util.Stack"/>
     <fullyQualifiedTypeName name="java.lang.Character"/>
+    <fullyQualifiedTypeName name="java.util.Stack"/>
 </qualifiedTypeNameHistroy>

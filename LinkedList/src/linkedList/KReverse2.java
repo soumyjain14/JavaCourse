@@ -53,7 +53,6 @@ public class KReverse2 {
 		}
 		int count=1;
 		Node<Integer>temp=head;
-		Node<Integer>tail=head;
 		Node<Integer>smallAns;
 		while(temp!=null && count<k) {
 			count++;
