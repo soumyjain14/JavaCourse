@@ -1,24 +1,34 @@
 import java.util.*;
 public class ReverseAStack {
-	
-	public static void reverseStack(Stack<Integer> input, Stack<Integer> extra) {
-		while(!input.isEmpty()) {
-			extra.push(input.pop());
+
+	public static void reverseStack(Stack<Integer> input, Stack<Integer> extra, int length) {
+		if(length<=1) {
+			return;
 		}
-		int i=0;
-		while(!extra.isEmpty() && i<extra.size()) {
-			input.push(extra.elementAt(i));
-			i++;
-			
-		}
+		int temp=input.pop();
 		
+			reverseStack(input, extra,length-1);
+			while(!input.isEmpty()) {
+				extra.push(input.pop());
+			}
+		
+
+		input.push(temp);
+		while(!extra.isEmpty()) {
+			input.push(extra.pop());
+		}
+	}
+
+	public static void reverseStack(Stack<Integer> input, Stack<Integer> extra) {
+
+		reverseStack(input, extra,input.size());
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Stack<Integer> input=new Stack<Integer>();
 		Stack<Integer> empty=new Stack<Integer>();
-		int arr[]= {1,2,3,4,5,10};
+		int arr[]= {1,3,6};
 		for(int i=0;i<arr.length;i++) {
 			input.push(arr[i]);
 		}
@@ -26,7 +36,7 @@ public class ReverseAStack {
 		while(!input.isEmpty()) {
 			System.out.print(input.pop()+" ");
 		}
-		
+
 
 	}
 
