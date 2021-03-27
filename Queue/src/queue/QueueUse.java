@@ -19,6 +19,12 @@ public class QueueUse {
 		queue.enqueue(65);
 		queue.dequeue();
 		queue.dequeue();
+		queue.dequeue();
+		queue.dequeue();
+		queue.dequeue();
+		queue.dequeue();
+		queue.dequeue();
+		//queue.dequeue();
 
 		while(!queue.isEmpty()) {
 

@@ -48,6 +48,9 @@ public class QueueUsingLL {
 		Node temp=front.next;
 		front.next=null;
 		front=temp;
+		if(size==1) {
+			rear=null;
+		}
 		size--;
 		return temp1;
 	}
