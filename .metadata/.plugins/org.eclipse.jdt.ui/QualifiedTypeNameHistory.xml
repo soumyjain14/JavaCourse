@@ -39,4 +39,7 @@
     <fullyQualifiedTypeName name="StackUsingLL"/>
     <fullyQualifiedTypeName name="java.lang.Character"/>
     <fullyQualifiedTypeName name="java.util.Stack"/>
+    <fullyQualifiedTypeName name="queue.QueueEmptyException"/>
+    <fullyQualifiedTypeName name="queue.QueueFullException"/>
+    <fullyQualifiedTypeName name="queue.QueueUsingArray"/>
 </qualifiedTypeNameHistroy>
