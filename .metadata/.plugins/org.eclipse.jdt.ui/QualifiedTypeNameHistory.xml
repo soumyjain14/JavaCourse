@@ -28,7 +28,6 @@
     <fullyQualifiedTypeName name="generics.TwoNumbers"/>
     <fullyQualifiedTypeName name="javax.xml.soap.Node"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="linkedList.EvenAfterOddLL"/>
     <fullyQualifiedTypeName name="linkedList.Node"/>
@@ -42,4 +41,8 @@
     <fullyQualifiedTypeName name="queue.QueueEmptyException"/>
     <fullyQualifiedTypeName name="queue.QueueFullException"/>
     <fullyQualifiedTypeName name="queue.QueueUsingArray"/>
+    <fullyQualifiedTypeName name="queue.QueueUsingLL"/>
+    <fullyQualifiedTypeName name="java.util.EmptyStackException"/>
+    <fullyQualifiedTypeName name="java.util.Queue"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
 </qualifiedTypeNameHistroy>
