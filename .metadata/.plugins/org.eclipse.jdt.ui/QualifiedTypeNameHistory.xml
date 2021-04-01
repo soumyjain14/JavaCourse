@@ -19,10 +19,7 @@
     <fullyQualifiedTypeName name="recursion.Factorial"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="javax.management.ObjectInstance"/>
-    <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="recursion.MergeSort"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="vehicle.Vehicle"/>
     <fullyQualifiedTypeName name="interfaces.VehicleInterface"/>
     <fullyQualifiedTypeName name="generics.TwoNumbers"/>
@@ -37,7 +34,6 @@
     <fullyQualifiedTypeName name="StackEmptyError"/>
     <fullyQualifiedTypeName name="StackUsingLL"/>
     <fullyQualifiedTypeName name="java.lang.Character"/>
-    <fullyQualifiedTypeName name="java.util.Stack"/>
     <fullyQualifiedTypeName name="queue.QueueEmptyException"/>
     <fullyQualifiedTypeName name="queue.QueueFullException"/>
     <fullyQualifiedTypeName name="queue.QueueUsingArray"/>
@@ -45,4 +41,8 @@
     <fullyQualifiedTypeName name="java.util.EmptyStackException"/>
     <fullyQualifiedTypeName name="java.util.Queue"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="java.util.Stack"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>

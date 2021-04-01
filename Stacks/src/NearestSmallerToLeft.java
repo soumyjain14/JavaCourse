@@ -31,7 +31,7 @@ public class NearestSmallerToLeft {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int input[]= {13,7,6,10};
+		int input[]= {4,5,2,10,8};
 		int ans[]=nstl(input);
 		for(int i=0;i<ans.length;i++) {
 			System.out.print(ans[i]+" ");
