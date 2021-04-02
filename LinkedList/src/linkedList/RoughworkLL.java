@@ -1,5 +1,6 @@
 package linkedList;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class RoughworkLL {
@@ -32,12 +33,49 @@ public class RoughworkLL {
 			temp=temp.next;
 		}
 	}
+	
+	public static int countLL(Node<Integer> head) {
+		Node<Integer>temp=head;
+		int count=0;
+		while(temp!=null) {
+			count++;
+			temp=temp.next;
+		}
+		return count;
+	}
+	
+	public static boolean isPalindrome(Node<Integer> head) {
+		Node<Integer>temp=head;
+		Node<Integer>temp1=head;
+		int length=countLL(temp);
+		ArrayList<Integer> list=new ArrayList<>(length);
+		for(int i=0;i<length;i++) {
+			list.add(temp1.data);
+			temp1=temp1.next;
+		}
+		
+		temp1=head;
+		int last=length-1;int i=0;
+		
+		while(last>=(length/2) && i<=(length/2)) {
+			
+			if(list.get(i)!=list.get(last)) {
+				return false;
+				
+			}
+			
+			last--;
+			i++;
+			
+		}
+		return true;
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Node<Integer>head=takeInput();
-		
-		printLL(head);
+		boolean ans=isPalindrome(head);
+		System.out.println(ans);
 
 	}
 
