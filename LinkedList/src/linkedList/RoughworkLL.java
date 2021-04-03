@@ -1,4 +1,5 @@
 package linkedList;
+import java.util.Stack;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -45,30 +46,21 @@ public class RoughworkLL {
 	}
 	
 	public static boolean isPalindrome(Node<Integer> head) {
-		Node<Integer>temp=head;
-		Node<Integer>temp1=head;
-		int length=countLL(temp);
-		ArrayList<Integer> list=new ArrayList<>(length);
-		for(int i=0;i<length;i++) {
-			list.add(temp1.data);
-			temp1=temp1.next;
+		Stack<Integer> stack=new Stack<>();
+		Node<Integer> temp=head;
+		while(temp!=null) {
+			stack.push(temp.data);
+			temp=temp.next;
 		}
-		
-		temp1=head;
-		int last=length-1;int i=0;
-		
-		while(last>=(length/2) && i<=(length/2)) {
-			
-			if(list.get(i)!=list.get(last)) {
+		temp=head;
+		while(temp!=null) {
+			if(temp.data!=stack.pop()) {
 				return false;
-				
 			}
-			
-			last--;
-			i++;
-			
+			temp=temp.next;
 		}
 		return true;
+		
 	}
 
 	public static void main(String[] args) {
