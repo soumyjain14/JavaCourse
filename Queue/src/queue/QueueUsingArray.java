@@ -1,5 +1,5 @@
 package queue;
-
+//Edit starts
 public class QueueUsingArray {
 	
 	int data[];
@@ -31,18 +31,21 @@ public class QueueUsingArray {
 		return (size==0);
 	}
 	
+	public boolean isFull() {
+		return (size==data.length);
+	}
+	
 	public int front() throws QueueEmptyException {
 		if(size==0) {
-			throw new QueueEmptyException();
+			return -1;
 		}
 		return data[front];
 	}
 	
 	public void enqueue(int element) throws QueueFullException {
 		if(size==data.length) {
-			doubleCapacity();
-			front=0;
-			rear=size-1;
+			System.out.println("false");
+			return;
 		}
 		
 		if(size==0) {
@@ -55,22 +58,32 @@ public class QueueUsingArray {
 		rear++;
 		data[rear]=element;
 		size++;
+		System.out.println("True");
 	}
+	public int Rear() {
+        if(size==0){
+            return -1;
+        }
+        return data[rear];
+        
+    }
 	
-	private void doubleCapacity() {
-		int temp[]=data;
-		data=new int[temp.length*2];
-		for(int i=front;i<temp.length;i++) {
-			data[i-front]=temp[i];
-		}
-		for(int i=0;i<front;i++) {
-			data[i+front+1]=temp[i];
-		}
-	}
+//	private void doubleCapacity() {
+//		int temp[]=data;
+//		data=new int[temp.length*2];
+//		for(int i=front;i<temp.length;i++) {
+//			data[i-front]=temp[i];
+//		}
+//		for(int i=0;i<front;i++) {
+//			data[i+front+1]=temp[i];
+//		}
+//	}
 	
 	public int dequeue() throws QueueEmptyException {
 		if(size==0) {
-			throw new QueueEmptyException();
+			System.out.println("False");
+			return -1;
+			
 		}
 		int temp=data[front];
 		if(front==data.length-1) {
@@ -82,6 +95,7 @@ public class QueueUsingArray {
 			rear=-1;
 			front=-1;
 		}
+		System.out.println("True");
 		return temp;
 	}
 
