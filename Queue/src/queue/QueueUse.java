@@ -9,11 +9,7 @@ public class QueueUse {
 		queue.enqueue(2);
 		queue.enqueue(3);
 		queue.enqueue(4);
-		System.out.println(queue.Rear());
-		System.out.println(queue.isFull());
-		queue.dequeue();
-		queue.enqueue(4);
-		System.out.println(queue.Rear());
+
 //		while(!queue.isEmpty()) {
 //
 //			System.out.print(queue.dequeue()+" ");

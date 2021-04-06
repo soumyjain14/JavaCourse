@@ -1,10 +1,9 @@
 package tree;
 
 import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Scanner;
 
-public class TreeUse {
+public class NumNodes {
 	
 	public static TreeNode<Integer> takeInputBetter(){
 		Scanner scan=new Scanner(System.in);
@@ -28,34 +27,19 @@ public class TreeUse {
 		return rootNode;
 	}
 	
-	public static void printTreeBetter(TreeNode<Integer> rootNode) {
-		LinkedList<TreeNode<Integer>> queue=new LinkedList<>();
-		queue.add(rootNode);
-	
-		System.out.println(rootNode.data);
-		while(!queue.isEmpty()) {
-			
-			TreeNode<Integer> frontNode=queue.poll();
-			
-			String s="";
-			for(int i=0;i<frontNode.children.size();i++) {
-				s=s+frontNode.children.get(i).data+" ";
-				
-				queue.add(frontNode.children.get(i));
-							
-			}
-			System.out.println(s);
-			
-			
+	public static int numNodes(TreeNode<Integer> root) {
+		int count=1;
+		for(int i=0;i<root.children.size();i++) {
+			count=count+numNodes(root.children.get(i));
 		}
+		return count;
 	}
-	
-	
+
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		TreeNode<Integer> root=takeInputBetter();
-		printTreeBetter(root);
-		
-		
+		int count=numNodes(root);
+		System.out.println(count);
 
 	}
 
