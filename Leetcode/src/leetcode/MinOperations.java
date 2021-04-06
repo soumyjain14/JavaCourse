@@ -5,18 +5,8 @@ import java.util.Scanner;
 public class MinOperations {
 
 	public static int minOperations(int n) {
-		int arr[]=new int[n];
-		int count=0;
-		for(int i=0;i<n;i++) {
-			arr[i]=(2*i)+1;
-		}
-		
-			for(int i=0;i<(n/2);i++) {
-				count+=n-arr[i];
-			}
-		
-		
-		return count;
+		int count=n/2;
+		return count*(count+n%2);		
 
 	}
 
