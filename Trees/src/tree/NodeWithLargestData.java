@@ -3,8 +3,8 @@ package tree;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class HeightOfTree {
-	static int temp;
+public class NodeWithLargestData {
+	
 	public static TreeNode<Integer> takeInputBetter(){
 		Scanner scan=new Scanner(System.in);
 		System.out.println("Enter the root data");
@@ -27,29 +27,25 @@ public class HeightOfTree {
 		return rootNode;
 	}
 	
-	public static int heightTree(TreeNode<Integer> root) {
+	public static int LargestData(TreeNode<Integer> root) {
 		if(root==null) {
-			return 0;
-		}
-		
-		if(root.children.size()==0) {
-			return 1;
+			return -1;
 		}
 		int max=Integer.MIN_VALUE;
+		max=root.data;
 		for(int i=0;i<root.children.size();i++) {
-			int ans=heightTree(root.children.get(i));
+			int ans=LargestData(root.children.get(i));
 			if(ans>max) {
 				max=ans;
 			}
-			
 		}
-		return max+1;
-		
+		return max;
 	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		TreeNode<Integer> root=takeInputBetter();
-		int ans=heightTree(root);
+		int ans=LargestData(root);
 		System.out.println(ans);
 
 	}
