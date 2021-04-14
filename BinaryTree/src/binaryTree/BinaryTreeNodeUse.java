@@ -8,31 +8,31 @@ public class BinaryTreeNodeUse {
 		if(root==null) {
 			return;
 		}
-		String s=root.data+"";
+		String toBePrinted=root.data+"";
 		if(root.left!=null) {
-			s=s+"L"+root.left.data+",";
+			toBePrinted+=" L:"+root.left.data+",";
 		}
 		if(root.right!=null) {
-			s=s+"R"+root.right.data+",";
+			toBePrinted+="R:"+root.right.data+",";
 		}
-		System.out.println(s);
+		System.out.println(toBePrinted);
 		printTree(root.left);
 		printTree(root.right);
 	}
 	
-	public static BinaryTreeNode<Integer> takeInput(Scanner s){
+	public static BinaryTreeNode<Integer> takeInput(Scanner scan){
 		System.out.println("Enter the root data");
-		int rootData=s.nextInt();
+		int rootData=scan.nextInt();
 		if(rootData==-1) {
 			return null;
 		}
 		BinaryTreeNode<Integer> rootNode=new BinaryTreeNode<Integer>(rootData);
-		rootNode.left=takeInput(s);
-		rootNode.right=takeInput(s);
+		rootNode.left=takeInput(scan);
+		rootNode.right=takeInput(scan);
 		return rootNode;
-			
 	}
-
+	
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scan=new Scanner(System.in);
