@@ -47,19 +47,63 @@ public class CountNodes {
 		if(root==null) {
 			return 0;
 		}
-		if(root!=null && root.left==null && root.right==null) {
+		int ans=1;
+		ans+=countNodes(root.left)+countNodes(root.right);
+		return ans;
+	}
+
+	public static boolean isNodePresent(BinaryTreeNode<Integer> root, int x) {
+		if(root==null) {
+			return false;
+		}
+		if(root.data==x) {
+			return true;
+		}
+		boolean ans=false;
+		if(root.left!=null) {
+			ans=isNodePresent(root.left, x);
+			if(ans==true) {
+				return ans;
+			}
+			
+		}
+		if(root.right!=null) {
+			ans=isNodePresent(root.right, x);
+			if(ans==true) {
+				return ans;
+			}
+			
+		}
+		return ans;
+		
+	}
+	
+	public static int heightOfTree(BinaryTreeNode<Integer> root) {
+		if(root.left==null && root.right==null) {
 			return 1;
 		}
-		int ans=1;
-		ans+=countNodes(root.left);
-		ans+=countNodes(root.right);
-		return ans;
+		int ans=0;int max1=Integer.MIN_VALUE;int max2=Integer.MIN_VALUE;
+		if(root.left!=null) {
+			ans=ans+heightOfTree(root.left);
+			if(ans>=max1) {
+				max1=ans;
+			}
+		}
+		ans=0;
+		if(root.right!=null) {
+			ans=ans+heightOfTree(root.right);
+			if(ans>=max2) {
+				max2=ans;
+			}
+		}
+		int max=Math.max(max1, max2);
+		return max+1;
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		BinaryTreeNode<Integer> root=takeInputLevelWise();
-		System.out.println(countNodes(root));
+		System.out.println(heightOfTree(root));
 
 	}
 
