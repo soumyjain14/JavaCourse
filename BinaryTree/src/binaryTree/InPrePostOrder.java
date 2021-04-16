@@ -3,7 +3,8 @@ package binaryTree;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class CountNodes {
+public class InPrePostOrder {
+	
 	public static BinaryTreeNode<Integer> takeInputLevelWise(){
 		Scanner scan=new Scanner(System.in);
 		LinkedList<BinaryTreeNode<Integer>> queue=new LinkedList<>();
@@ -43,54 +44,19 @@ public class CountNodes {
 		return rootNode;
 	}
 
-	public static int countNodes(BinaryTreeNode<Integer> root) {
+	public static void printInOrder(BinaryTreeNode<Integer> root) {
 		if(root==null) {
-			return 0;
+			return;
 		}
-		int ans=1;
-		ans+=countNodes(root.left)+countNodes(root.right);
-		return ans;
-	}
-
-	public static boolean isNodePresent(BinaryTreeNode<Integer> root, int x) {
-		if(root==null) {
-			return false;
-		}
-		if(root.data==x) {
-			return true;
-		}
-		boolean ans=false;
-		if(root.left!=null) {
-			ans=isNodePresent(root.left, x);
-			if(ans==true) {
-				return ans;
-			}
-			
-		}
-		if(root.right!=null) {
-			ans=isNodePresent(root.right, x);
-			if(ans==true) {
-				return ans;
-			}
-			
-		}
-		return ans;
-		
-	}
-	
-	public static int heightOfTree(BinaryTreeNode<Integer> root) {
-		if(root==null) {
-			return 0;
-		}
-		int lh=heightOfTree(root.left);
-		int rh=heightOfTree(root.right);
-		return 1+Math.max(lh, rh);
+		printInOrder(root.left);
+		System.out.print(root.data+" ");
+		printInOrder(root.right);
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		BinaryTreeNode<Integer> root=takeInputLevelWise();
-		System.out.println(heightOfTree(root));
+		printInOrder(root);
 
 	}
 

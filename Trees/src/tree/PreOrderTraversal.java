@@ -33,6 +33,13 @@ public class PreOrderTraversal {
 		}
 		System.out.print(root.data+" ");
 	}
+	
+	public static void preOrder(TreeNode<Integer> root) {
+		System.out.print(root.data+" ");
+		for(int i=0;i<root.children.size();i++) {
+			preOrder(root.children.get(i));
+		}
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

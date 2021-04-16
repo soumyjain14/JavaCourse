@@ -29,6 +29,7 @@ public class ReplaceWithDepthValue {
 
 	
 	public static void depthTree(TreeNode<Integer> root) {
+
 		LinkedList<TreeNode<Integer>> queue=new LinkedList<>();
 		queue.add(root);
 		System.out.println("0");
@@ -56,6 +57,24 @@ public class ReplaceWithDepthValue {
 		
 	}
 
+	public static void depthTreeDiff(TreeNode<Integer> root) {
+		depthTreeDiff2(root,0);
+	}
+	
+	public static void depthTreeDiff2(TreeNode<Integer> root, int depth) {
+		if(depth>=0) {
+			root.data=depth;
+		}
+		
+		if(root.children.size()==0) {
+			return;
+		}
+		for(int i=0;i<root.children.size();i++) {
+			depthTreeDiff2(root.children.get(i), depth+1);
+		}
+		
+		
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		TreeNode<Integer> root=takeInputBetter();

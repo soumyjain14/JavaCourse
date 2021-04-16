@@ -3,7 +3,9 @@ package binaryTree;
 import java.util.LinkedList;
 import java.util.Scanner;
 
+
 public class DiameterOfTree {
+	
 	
 	public static BinaryTreeNode<Integer> takeInputLevelWise(){
 		Scanner scan=new Scanner(System.in);
@@ -56,7 +58,11 @@ public class DiameterOfTree {
 		
 	}
 	
+		
+	
+	
 	public static Pair<Integer, Integer> diameterBetter(BinaryTreeNode<Integer> root){
+		
 		if(root==null) {
 			Pair<Integer,Integer> output=new Pair<>();
 			output.height=0;
@@ -89,6 +95,8 @@ public class DiameterOfTree {
 		int rh=height(root.right);
 		return 1+Math.max(lh, rh);
 	}
+	
+	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
