@@ -52,6 +52,8 @@ public class InPrePostOrder {
 		System.out.print(root.data+" ");
 		printInOrder(root.right);
 	}
+	
+	//Change order for Pre and Post
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

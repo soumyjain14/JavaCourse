@@ -72,45 +72,53 @@ public class BinaryTreeNodeUse {
 		return rootNode;
 	}
 
+
 	public static void printTreeBetter(BinaryTreeNode<Integer> root) {
 		if(root==null) {
 			return;
 		}
-
 		LinkedList<BinaryTreeNode<Integer>> queue=new LinkedList<>();
 		queue.add(root);
 		while(!queue.isEmpty()) {
-			
 			BinaryTreeNode<Integer> frontNode=queue.poll();
 			String toBePrinted="";
-			
-				toBePrinted=frontNode.data+":";	
-				if(frontNode.left!=null) {
-				toBePrinted+="L:"+frontNode.left.data+",";
+			toBePrinted=frontNode.data+":";
+			if(frontNode.left!=null) {
+				toBePrinted+="L:"+frontNode.left.data;
 				queue.add(frontNode.left);
-				}else {
-					toBePrinted+="L:"+"-1"+",";
-					//queue.poll();
-				}
-				if(frontNode.right!=null) {
-				toBePrinted+="R:"+frontNode.right.data+",";
-				queue.add(frontNode.right);	
-				}else {
-					toBePrinted+="R:"+"-1"+",";
-					//queue.poll();
-				}			
-				
-					System.out.println(toBePrinted);
-	
+			}
+			if(frontNode.right!=null) {
+				toBePrinted+="R:"+frontNode.right.data;
+				queue.add(frontNode.right);
+			}
+			System.out.println(toBePrinted);
 		}
 	}
-
+	
+	public static void mirrorTree(BinaryTreeNode<Integer> root) {
+		if(root==null) {
+			return;
+		}
+		mirrorTree(root.left);
+		mirrorTree(root.right);
+		swapNodes(root);
+	}
+	
+	public static void swapNodes(BinaryTreeNode<Integer> root) {
+		if(root==null) {
+			return;
+		}
+		BinaryTreeNode<Integer> temp=root.left;
+		root.left=root.right;
+		root.right=temp;
+	}
 
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//Scanner scan=new Scanner(System.in);
 		BinaryTreeNode<Integer> root=takeInputLevelWise();
+		mirrorTree(root);
 		printTreeBetter(root);
 
 
