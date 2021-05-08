@@ -1,34 +1,10 @@
-package binaryTree;
+package bst;
 
 import java.util.LinkedList;
 import java.util.Scanner;
 
+public class SearchInBST {
 
-
-public class CheckBalanced {
-	
-	public static int heightOfTree(BinaryTreeNode<Integer> root) {
-		if(root==null) {
-			return 0;
-		}
-		int leftHeight=heightOfTree(root.left);
-		int rightheight=heightOfTree(root.right);
-		return 1+Math.max(leftHeight, rightheight);
-		
-	}
-	
-	public static boolean checkBalanced(BinaryTreeNode<Integer> root) {
-		if(root==null) {
-			return true;
-		}
-		int leftHeight=heightOfTree(root.left);
-		int rightHeight=heightOfTree(root.right);
-		if(Math.abs(leftHeight-rightHeight)<=1 && checkBalanced(root.left) && checkBalanced(root.right)) {
-			return true;
-		}
-		return false;
-	}
-	
 	public static BinaryTreeNode<Integer> takeInputLevelWise(){
 		Scanner scan=new Scanner(System.in);
 		LinkedList<BinaryTreeNode<Integer>> queue=new LinkedList<>();
@@ -68,10 +44,28 @@ public class CheckBalanced {
 		return rootNode;
 	}
 
+	public static boolean searchInBST(BinaryTreeNode<Integer> root, int k) {
+		if(root==null) {
+			return false;
+		}
+		if(root.data.equals(k)) {
+			return true;
+		}
+		boolean ans1=false;
+		boolean ans2=false;
+		if(root.data<k) {
+			ans1=searchInBST(root.right, k);			
+		}else {
+			ans2=searchInBST(root.left, k);
+		}
+
+		return ans1|| ans2;
+	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		BinaryTreeNode<Integer> root=takeInputLevelWise();
-		boolean ans=checkBalanced(root);
+		boolean ans=searchInBST(root, 3);
 		System.out.println(ans);
 
 	}

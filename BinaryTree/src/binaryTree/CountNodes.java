@@ -3,6 +3,8 @@ package binaryTree;
 import java.util.LinkedList;
 import java.util.Scanner;
 
+
+
 public class CountNodes {
 	public static BinaryTreeNode<Integer> takeInputLevelWise(){
 		Scanner scan=new Scanner(System.in);

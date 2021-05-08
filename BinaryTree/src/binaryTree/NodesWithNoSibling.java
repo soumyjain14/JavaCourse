@@ -3,6 +3,8 @@ package binaryTree;
 import java.util.LinkedList;
 import java.util.Scanner;
 
+
+
 public class NodesWithNoSibling {
 	
 	public static BinaryTreeNode<Integer> takeInputLevelWise(){

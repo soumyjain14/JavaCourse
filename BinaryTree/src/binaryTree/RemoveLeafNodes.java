@@ -3,6 +3,8 @@ package binaryTree;
 import java.util.LinkedList;
 import java.util.Scanner;
 
+
+
 public class RemoveLeafNodes {
 	
 	public static BinaryTreeNode<Integer> takeInputLevelWise(){
