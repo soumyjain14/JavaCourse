@@ -55,4 +55,5 @@
     <fullyQualifiedTypeName name="binaryTree.Pair"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="binaryTree.BinaryTreeNode"/>
+    <fullyQualifiedTypeName name="bst.BinaryTreeNode"/>
 </qualifiedTypeNameHistroy>
