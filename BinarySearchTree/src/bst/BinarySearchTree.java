@@ -13,24 +13,19 @@ public class BinarySearchTree {
 			return rootNode;
 		}
 		if(root.data>=data) {
-			BinaryTreeNode<Integer> leftNode=insertNode(data, root.left);
-			if(leftNode!=null) {
-				root.left=leftNode;	
-				return root;
-			}
+			BinaryTreeNode<Integer> leftNode=insertNode(data, root.left);			
+			root.left=leftNode;	
+			return root;			
 		}else {
-			BinaryTreeNode<Integer> rightNode=insertNode(data, root.right);
-			if(rightNode!=null) {
-				root.right=rightNode;	
-				return root;
-			}
-		}
-		return null ;
+			BinaryTreeNode<Integer> rightNode=insertNode(data, root.right);			
+			root.right=rightNode;	
+			return root;			
+		}		
 	}
 	public void insertNode(int data) {
 		root=insertNode(data, root);
 	}
-	
+
 	private int minTree(BinaryTreeNode<Integer> root) {
 		if(root==null) {
 			return Integer.MAX_VALUE;
@@ -38,7 +33,7 @@ public class BinarySearchTree {
 		int min=root.data;
 		return Math.min(min, Math.min(minTree(root.left), minTree(root.right)));
 	}
-	
+
 	private BinaryTreeNode<Integer> deleteNode(int data, BinaryTreeNode<Integer> root){
 		if(root==null) {
 			return null;
@@ -53,7 +48,7 @@ public class BinarySearchTree {
 				BinaryTreeNode<Integer> ans=deleteNode(min, root.right);
 				root.right=ans;
 				return root;
-				
+
 			}
 			if(root.right!=null) {
 				return root.right;
@@ -61,7 +56,7 @@ public class BinarySearchTree {
 			if(root.left!=null) {
 				return root.left;
 			}
-			
+
 		}
 		if(root.data>data) {
 			BinaryTreeNode<Integer> leftNode=deleteNode(data, root.left);
