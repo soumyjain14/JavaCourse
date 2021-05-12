@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="oops_1.StudentClass"/>
-    <fullyQualifiedTypeName name="oops_1.Student"/>
     <fullyQualifiedTypeName name="classes_and_objects.ComplexNumber"/>
     <fullyQualifiedTypeName name="classes_and_objects.DynamicArray1"/>
     <fullyQualifiedTypeName name="java.io.ObjectInputStream.GetField"/>
@@ -58,5 +56,8 @@
     <fullyQualifiedTypeName name="bst.Node"/>
     <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="binaryTree.BinarySearchTreeUse"/>
+    <fullyQualifiedTypeName name="bst.GetRootToNodePath"/>
+    <fullyQualifiedTypeName name="bst.BinarySearchTree"/>
     <fullyQualifiedTypeName name="bst.BinaryTreeNode"/>
 </qualifiedTypeNameHistroy>
