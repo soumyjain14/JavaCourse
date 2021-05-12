@@ -93,7 +93,7 @@ public class PairSum {
 		arr=toArray(root, arr);		
 		Arrays.sort(arr);
 		int i=0;int j=arr.length-1;
-		while(i<=j) {
+		while(i<j) {
 			if(arr[i]+arr[j]==sum) {
 				System.out.print(arr[i]+" "+arr[j]);
 				System.out.println();
