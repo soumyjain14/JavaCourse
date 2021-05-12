@@ -44,6 +44,28 @@ public class GetLCA {
 		return rootNode;
 	}
 
+//	public static int getLCA(BinaryTreeNode<Integer> root, int a, int b) {
+//		if(root==null) {
+//			return -1;
+//		}
+//		if(a==root.data || b==root.data) {
+//			return root.data;
+//		}
+//		int leftAns=getLCA(root.left, a, b);
+//		int rightAns=getLCA(root.right, a, b);
+//		if(leftAns!=-1 && rightAns!=-1) {
+//			return root.data;
+//		}else if(leftAns!=-1) {
+//			return leftAns;
+//		}else if(rightAns!=-1) {
+//			return rightAns;
+//		}else {
+//			return -1;
+//		}
+//	}
+//	
+	
+	// for BST
 	public static int getLCA(BinaryTreeNode<Integer> root, int a, int b) {
 		if(root==null) {
 			return -1;
@@ -51,23 +73,23 @@ public class GetLCA {
 		if(a==root.data || b==root.data) {
 			return root.data;
 		}
-		int leftAns=getLCA(root.left, a, b);
-		int rightAns=getLCA(root.right, a, b);
-		if(leftAns!=-1 && rightAns!=-1) {
-			return root.data;
-		}else if(leftAns!=-1) {
+		if(a<root.data && b<root.data) {
+			int leftAns=getLCA(root.left, a, b);
 			return leftAns;
-		}else if(rightAns!=-1) {
+		}
+		if(a>root.data && b>root.data) {
+			int rightAns=getLCA(root.right, a, b);
 			return rightAns;
 		}else {
-			return -1;
+			return root.data;
 		}
 	}
+	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		BinaryTreeNode<Integer> root=takeInputLevelWise();
-		int ans=getLCA(root, 3, 9);
+		int ans=getLCA(root, 6,2);
 		System.out.println(ans);
 
 	}
