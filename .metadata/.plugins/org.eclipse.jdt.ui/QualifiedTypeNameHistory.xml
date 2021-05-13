@@ -35,7 +35,6 @@
     <fullyQualifiedTypeName name="queue.QueueUsingLL"/>
     <fullyQualifiedTypeName name="java.util.EmptyStackException"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="linkedList.IsPalindrome"/>
     <fullyQualifiedTypeName name="queue.DequeUsingLL"/>
     <fullyQualifiedTypeName name="queue.QueueUsingArray"/>
@@ -45,7 +44,6 @@
     <fullyQualifiedTypeName name="java.awt.List"/>
     <fullyQualifiedTypeName name="leetcode.TreeNode"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.util.Stack"/>
     <fullyQualifiedTypeName name="binaryTree.MirrorABinaryTree"/>
     <fullyQualifiedTypeName name="binaryTree.MaxNodePair"/>
@@ -59,5 +57,7 @@
     <fullyQualifiedTypeName name="binaryTree.BinarySearchTreeUse"/>
     <fullyQualifiedTypeName name="bst.GetRootToNodePath"/>
     <fullyQualifiedTypeName name="bst.BinarySearchTree"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="bst.BinaryTreeNode"/>
 </qualifiedTypeNameHistroy>
