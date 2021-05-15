@@ -48,19 +48,12 @@ public class LargestBSTSubtree {
 		if(root==null) {
 			return 0;
 		}
-		boolean leftTree=isBST(root.left);
-		boolean rightTree=isBST(root.right);
-		int leftHeight=0;
-		int rightHeight=0;
-		if(leftTree) {
-			leftHeight=heightTree(root.left);
+		if(isBST(root)) {
+			return heightTree(root);
+		}else {
+			return Math.max(largestBST(root.left), largestBST(root.right));
 		}
-		if(rightTree) {
-			rightHeight=heightTree(root.right);
-		}
-		largestBST(root.left);
 		
-		return Math.max(leftHeight, rightHeight);
 	}
 	
 	public static boolean isBST(BinaryTreeNode<Integer> root) {
