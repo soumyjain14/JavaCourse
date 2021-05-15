@@ -56,8 +56,8 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="binaryTree.BinarySearchTreeUse"/>
     <fullyQualifiedTypeName name="bst.GetRootToNodePath"/>
-    <fullyQualifiedTypeName name="bst.BinarySearchTree"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="bst.BinarySearchTree"/>
     <fullyQualifiedTypeName name="bst.BinaryTreeNode"/>
 </qualifiedTypeNameHistroy>
