@@ -23,6 +23,7 @@ public class Hashmaps {
 		for(String str:elements) {
 			System.out.println(str);
 		}
+		
 	}
 
 }
