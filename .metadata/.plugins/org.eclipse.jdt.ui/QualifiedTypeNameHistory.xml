@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="Factorial"/>
     <fullyQualifiedTypeName name="java.lang.Package"/>
     <fullyQualifiedTypeName name="classes_and_objects.Student"/>
@@ -45,7 +44,6 @@
     <fullyQualifiedTypeName name="binaryTree.MaxNodePair"/>
     <fullyQualifiedTypeName name="binaryTree.Pair"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
-    <fullyQualifiedTypeName name="binaryTree.BinaryTreeNode"/>
     <fullyQualifiedTypeName name="bst.Pair"/>
     <fullyQualifiedTypeName name="bst.Node"/>
     <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
@@ -59,5 +57,7 @@
     <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="javax.sound.midi.SysexMessage"/>
+    <fullyQualifiedTypeName name="binaryTree.Node"/>
+    <fullyQualifiedTypeName name="binaryTree.BinaryTreeNode"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
 </qualifiedTypeNameHistroy>
