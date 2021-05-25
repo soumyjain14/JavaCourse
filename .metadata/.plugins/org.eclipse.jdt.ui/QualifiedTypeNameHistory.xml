@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="Factorial"/>
-    <fullyQualifiedTypeName name="java.lang.Package"/>
-    <fullyQualifiedTypeName name="classes_and_objects.Student"/>
-    <fullyQualifiedTypeName name="classes_and_objects.Fraction"/>
-    <fullyQualifiedTypeName name="classes_and_objects.ComplexNumbers"/>
-    <fullyQualifiedTypeName name="classes_and_objects.DynamicArray"/>
-    <fullyQualifiedTypeName name="classes_and_objects.PolynomialUse"/>
     <fullyQualifiedTypeName name="classes_and_objects.Polynomial"/>
     <fullyQualifiedTypeName name="classes_and_objects.Polynomial1"/>
     <fullyQualifiedTypeName name="classes_and_objects.ZeroDenominatorException"/>
@@ -34,7 +27,6 @@
     <fullyQualifiedTypeName name="linkedList.IsPalindrome"/>
     <fullyQualifiedTypeName name="queue.DequeUsingLL"/>
     <fullyQualifiedTypeName name="queue.QueueUsingArray"/>
-    <fullyQualifiedTypeName name="java.util.Queue"/>
     <fullyQualifiedTypeName name="leetcode.IsAlienSorted"/>
     <fullyQualifiedTypeName name="java.awt.List"/>
     <fullyQualifiedTypeName name="leetcode.TreeNode"/>
@@ -43,7 +35,6 @@
     <fullyQualifiedTypeName name="binaryTree.MirrorABinaryTree"/>
     <fullyQualifiedTypeName name="binaryTree.MaxNodePair"/>
     <fullyQualifiedTypeName name="binaryTree.Pair"/>
-    <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="bst.Pair"/>
     <fullyQualifiedTypeName name="bst.Node"/>
     <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
@@ -55,9 +46,18 @@
     <fullyQualifiedTypeName name="bst.BinarySearchTree"/>
     <fullyQualifiedTypeName name="bst.BinaryTreeNode"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="javax.sound.midi.SysexMessage"/>
     <fullyQualifiedTypeName name="binaryTree.Node"/>
+    <fullyQualifiedTypeName name="java.util.Queue"/>
     <fullyQualifiedTypeName name="binaryTree.BinaryTreeNode"/>
+    <fullyQualifiedTypeName name="java.util.function.ToDoubleBiFunction"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="maps.TwoSumLC"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="maps.Map"/>
+    <fullyQualifiedTypeName name="maps.MapNode"/>
+    <fullyQualifiedTypeName name="pq.Priority_Queue"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="pq.Priority_Queue_Exception"/>
 </qualifiedTypeNameHistroy>

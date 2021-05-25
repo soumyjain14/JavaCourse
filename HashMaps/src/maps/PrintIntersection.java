@@ -25,8 +25,8 @@ public class PrintIntersection {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int arr1[]= {7,7,7};
-		int arr2[]= {7,7,7,7};
+		int arr1[]= {2,3,4,5,9,8,7};
+		int arr2[]= {3,6,5,2,1};
 		printIntersection(arr1, arr2);
 
 	}

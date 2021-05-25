@@ -121,7 +121,7 @@ public class BinaryTreeNodeUse {
 		// TODO Auto-generated method stub
 		//Scanner scan=new Scanner(System.in);
 		BinaryTreeNode<Integer> root=takeInputLevelWise();
-		mirrorTree(root);
+		//mirrorTree(root);
 		printTreeBetter(root);
 
 
