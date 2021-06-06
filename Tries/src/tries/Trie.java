@@ -108,6 +108,49 @@ public class Trie {
 
 	}
 	
+	private TrieNode find(TrieNode root, String word) {		
+		if(word.length()==0) {
+			return root;
+		}
+		int childIndex=word.charAt(0)-'a';
+		TrieNode child=root.children[childIndex];
+		if(child==null) { 
+			return null;
+		}
+		TrieNode ans=find(child, word.substring(1));
+		return ans;	
+		
+			
+	}
+
+	public TrieNode find(String word) {
+		return find(root, word);		
+
+	}
+	
+	public void findAllPairs(TrieNode root, String word, String output) {
+		if(root==null) {
+			return;
+		}
+		if(root.childCount==0 && root.isTerminating==true) {
+			System.out.println(word+output);
+			return;
+		}
+		if(root.isTerminating) {
+			output=word+output;
+			System.out.println(output);
+		}
+		TrieNode child=null;
+		for(int i=0;i<26;i++) {
+			if(root.children[i]!=null) {
+				child=root.children[i];
+				findAllPairs(child, word+child.data, "");
+			}
+		}
+		
+		
+	}
+
 	public int countWords() {
 		return countWords(root);
 	}
@@ -125,22 +168,7 @@ public class Trie {
 		return count;
 	}
 	
-	public boolean find(String word) {
-		return find(root,word);
-	}
-
-	private boolean find(TrieNode root, String word) {
-		// TODO Auto-generated method stub
-		if(word.length()==0) {
-			return true;
-		}
-		int childIndex=word.charAt(0)-'a';
-		TrieNode child=root.children[childIndex];
-		if(child==null) {
-			return false;
-		}
-		return find(child,word.substring(1));
-	}
+	
 	
 
 }

@@ -12,17 +12,18 @@ public class PatternMatching {
 				trie.add(vect.get(i).substring(j));
 			}
 		}
-		return trie.find(pattern);
+		return trie.search(pattern);
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ArrayList<String> vect=new ArrayList<>();
-		vect.add("abc");
-		vect.add("def");
-		vect.add("ghi");
-		vect.add("hg");
-		String pattern="hif";
+		vect.add("this");
+		vect.add("that");
+		vect.add("bat");
+		vect.add("am");
+		vect.add("at");
+		String pattern="he";
 		System.out.println(patternMatching(vect, pattern));
 		
 
