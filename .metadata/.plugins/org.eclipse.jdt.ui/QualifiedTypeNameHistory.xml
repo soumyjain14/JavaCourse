@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="StackFullException"/>
     <fullyQualifiedTypeName name="StackEmptyError"/>
     <fullyQualifiedTypeName name="StackUsingLL"/>
     <fullyQualifiedTypeName name="java.lang.Character"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="leetcode.Trie"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>
